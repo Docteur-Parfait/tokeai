@@ -1,0 +1,9 @@
+# TokeAI dependencies - pinned for reproducibility
+streamlit>=1.28.0
+pandas>=2.0.0
+google-generativeai>=0.3.0
+pypdf>=4.0.0
+goose3>=3.1.19
+requests>=2.31.0
+python-dotenv>=1.0.0
+python-json-logger>=2.0.0

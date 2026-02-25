@@ -1,0 +1,10 @@
+# Streamlit configuration for TokeAI
+[server]
+# Headless mode for optional future deployment
+# headless = true
+
+[theme]
+# Optional: customize later
+# primaryColor = "#..."
+# backgroundColor = "#..."
+# secondaryBackgroundColor = "#..."
