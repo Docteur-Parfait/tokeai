@@ -1,0 +1,18 @@
+# Do not copy into Docker image
+.env
+.env.*
+venv
+.venv
+__pycache__
+*.pyc
+.git
+.gitignore
+logs
+tasks
+.idea
+.vscode
+*.md
+!README.md
+Dockerfile
+.dockerignore
+fly.toml

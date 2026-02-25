@@ -93,11 +93,31 @@ tokeai/
 │   ├── app.py              # Streamlit entry point
 │   ├── config.py           # Loads GEMINI_API_KEY and paths
 │   ├── extractors/         # URL (goose3) and PDF (pypdf) extraction
-│   ├── services/           # Gemini summarization (Parfait personality)
+│   ├── services/           # Gemini summarization (EIT personality)
 │   ├── logging_config/     # JSON file logging
 │   └── utils/              # Custom exceptions
 └── logs/                   # JSON log files (created at runtime)
 ```
+
+## Deploy on Fly.io
+
+1. **Install Fly CLI** and log in: [fly.io/docs/hands-on/install-flyctl](https://fly.io/docs/hands-on/install-flyctl).
+
+2. **Create the app and deploy** from the project root:
+   ```bash
+   cd D:\python\tokeai
+   fly launch
+   ```
+   When prompted, choose an app name (e.g. `tokeai`) or leave the generated one. Do **not** deploy a Postgres or Redis if asked. This creates the app and deploys.
+
+3. **Set the Gemini API key** (required for the app to work):
+   ```bash
+   fly secrets set GEMINI_API_KEY=your_actual_api_key
+   ```
+
+4. **Open the app**: `fly open` or use the URL shown after deploy (e.g. `https://tokeai.fly.dev`).
+
+**If you see "app not found"** when deploying via GitHub: the app must exist first. Either run `fly launch` once from your machine (steps 2–3 above), or in the [Fly dashboard](https://fly.io/dashboard) create an app with the same name your GitHub integration uses, then redeploy from GitHub.
 
 ## Troubleshooting
 
@@ -108,4 +128,4 @@ tokeai/
 
 ## License
 
-Use and modify as needed. Author: Parfait.
+Use and modify as needed. Author: EIT.
